@@ -25,7 +25,7 @@ except FileNotFoundError:
     students_df = pd.DataFrame(columns=["studentId", "class"])
 
 
-@app.get("/")
+@app.get("/api")
 def get_students(class_filter: Optional[List[str]] = Query(None, alias="class")):
     """
     Serves student data.
